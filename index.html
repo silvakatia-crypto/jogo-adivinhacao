@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Adivinhação de Palavras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Adivinhe a Palavra</h1>
+    <p id="dica" class="dica">Dica: ...</p>
+
+    <!-- Área onde os traços e letras descobertas aparecem -->
+    <div id="palavra-oculta" class="palavra"></div>
+
+    <!-- Controles de entrada -->
+    <form id="form-palpite" class="controles">
+      <label for="input-letra" class="sr-only">Digite uma letra</label>
+      <input type="text" id="input-letra" maxlength="1" placeholder="Letra" autocomplete="off" required>
+      <button type="submit" id="btn-tentar">Tentar</button>
+    </form>
+
+    <!-- Status do jogo -->
+    <div class="status">
+      <p>Tentativas restantes: <strong id="tentativas">6</strong></p>
+      <p>Letras usadas: <span id="letras-usadas">Nenhuma</span></p>
+    </div>
+
+    <!-- Feedback de vitória/derrota e reinício -->
+    <p id="mensagem" class="mensagem" aria-live="polite"></p>
+    <button type="button" id="btn-reiniciar" class="btn-secundario oculto">Jogar Novamente</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
